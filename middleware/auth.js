@@ -33,7 +33,7 @@ exports.registrasi = function(req, res) {
                     if (error) {
                         console.log(error);
                     } else {
-                        response.ok("Berhasil menambahkan data baru", res);
+                        response.ok("Berhasil menambahkan data user baru", res);
                     }
                 });
             } else {
@@ -91,4 +91,8 @@ exports.login = function(req, res) {
             }
         }
     });
+}
+
+exports.halamanrahasia = function(req, res){
+    response.ok("Halaman ini hanya untuk user dengan role = 2!", res); 
 }
